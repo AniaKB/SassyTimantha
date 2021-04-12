@@ -1,8 +1,21 @@
 @import '_variables';
 @import '_mixins';
 
-
-
+$white:  #FFF;
+$white1: rgba#FFF, 0.1;
+$white2: rgba#FFF, 0.2;
+$white7: rgba#FFF, 0.7;
+$grey: #343A40;
+$grey5: rgba#343A40, 0.5;
+$turquoise: #1D809F;
+$turquoise9: rgba(29, 128, 159, 0.9)
+$turquoise10: #1D809F, 10%;
+$orange: #ECB807;
+$orange10: #ECB807, 10%;
+$black1: rgba(0, 0, 0, 0.1);
+$blueBlack1: rgba(52, 58, 64, 0.1);
+$blueBlack2: rgba(33, 37, 41, 0.2);
+$blueBlack5: rgba(52, 58, 64, 0.5);
 
 ///////////////////////////////
 //          GLOBALS          //
@@ -47,7 +60,7 @@ h6 {
 }
 
 .text-faded {
-    color: rgba(#FFF, 0.7);
+    color: $white7;
 }
 
 /* Map */
@@ -74,17 +87,17 @@ h6 {
     display: none;
     width: 50px;
     height: 50px;
-    background: rgba(#343A40, 0.5);
-    color: #FFF;
+    background: $grey5;
+    color: $white;
     line-height: 45px;
     text-align: center;
 }
 .scroll-to-top:focus,
 .scroll-to-top:hover {
-    color: #FFF;
+    color: $white;
 }
 .scroll-to-top:hover {
-    background: #343A40;
+    background: $grey;
 }
 .scroll-to-top i {
     font-weight: 800;
@@ -103,7 +116,7 @@ h6 {
     width: 100%;
     height: auto;
     min-height: 30rem;
-    background: linear-gradient(90deg, rgba(#FFF, 0.1) 0%, rgba(#FFF, 0.1) 100%), url('../img/bg-masthead.jpg');
+    background: linear-gradient(90deg, $white1 0%, $white1 100%), url('../img/bg-masthead.jpg');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -126,7 +139,6 @@ h6 {
 
 
 
-
 ///////////////////////////////
 //          SIDEBAR          //
 ///////////////////////////////
@@ -136,8 +148,8 @@ h6 {
     right: 0px;
     width: 250px;
     height: 100%;
-    background: #1D809F;
-    border-left: 1px solid rgba(#FFF, 0.1);
+    background: $turquoise;
+    border-left: 1px solid $white1;
     transform: translateX(250px);
     transition: 0.4s ease all;
     z-index: 2;
@@ -154,12 +166,12 @@ h6 {
 .sidebar-nav li.sidebar-nav-item a {
     display: block;
     padding: 15px;
-    color: #FFF;
+    color: $white;
     text-decoration: none;
 }
 .sidebar-nav li a:hover {
-    background: rgba(#FFF, 0.2);
-    color: #FFF;
+    background: $white2;
+    color: $white;
     text-decoration: none;
 }
 .sidebar-nav li a:active,
@@ -168,7 +180,7 @@ h6 {
 }
 .sidebar-nav > .sidebar-brand {
     height: 80px;
-    background: rgba(52, 58, 64, 0.1);
+    background: $blueBlack1;
     padding-top: 15px;
     padding-bottom: 15px;
     padding-left: 15px;
@@ -176,11 +188,11 @@ h6 {
     line-height: 50px;
 }
 .sidebar-nav > .sidebar-brand a {
-    color: #FFF;
+    color: $white;
 }
 .sidebar-nav > .sidebar-brand a:hover {
     background: none;
-    color: #FFF;
+    color: $white;
 }
 
 #sidebar-wrapper.active {
@@ -195,18 +207,18 @@ h6 {
     right: 15px;
     width: 50px;
     height: 50px;
-    background: rgba(52, 58, 64, 0.5);
-    color: #FFF;
+    background: $blueBlack5;
+    color: $white;
     line-height: 50px;
     text-align: center;
     z-index: 999;
 }
 .menu-toggle:focus,
 .menu-toggle:hover {
-    color: #FFF;
+    color: $white;
 }
 .menu-toggle:hover {
-    background: #343A40;
+    background: $grey;
 }
 
 
@@ -220,13 +232,12 @@ h6 {
     display: block;
     width: 7rem;
     height: 7rem;
-    background-color: #FFF;
-    color: #1D809F;
+    background-color: $white;
+    color: $turquoise;
     font-size: 2.25rem;
     line-height: 7.5rem;
-    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 3px 3px 0px $black1;
 }
-
 
 
 
@@ -235,7 +246,7 @@ h6 {
 ///////////////////////////////
 
 .callout {
-    background: linear-gradient(90deg, rgba(#FFF, 0.1) 0%, rgba(#FFF, 0.1) 100%), url('../img/bg-callout.jpg');
+    background: linear-gradient(90deg, $white1 0%, $white1 100%), url('../img/bg-callout.jpg');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -247,7 +258,6 @@ h6 {
     font-size: 3.5rem;
     font-weight: 700;
 }
-
 
 
 
@@ -269,12 +279,12 @@ h6 {
     display: flex;
     width: 100%;
     height: 100%;
-    background-color: rgba(33, 37, 41, 0.2);
+    background-color: $blueBlack2;
     z-index: 1;
 }
 .portfolio-item .caption .caption-content {
     margin: auto 2rem 2rem;
-    color: #FFF;
+    color: $white;
 }
 .portfolio-item .caption .caption-content h2 {
     font-size: 0.8rem;
@@ -307,11 +317,10 @@ h6 {
         clip-path: inset(2rem);
     }
     .portfolio-item:hover .caption {
-        background-color: rgba(29, 128, 159, 0.9);
+        background-color: $turquoise9;
         clip-path: inset(2rem);
     }
 }
-
 
 
 
@@ -327,17 +336,16 @@ footer.footer .social-link {
     display: block;
     width: 4rem;
     height: 4rem;
-    background-color: #1D809F;
+    background-color: $turquoise;
     font-size: 1.5rem;
     line-height: 4.3rem;
-    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 3px 3px 0px $black1;
     transition: background-color 0.15s ease-in-out;
 }
 footer.footer .social-link:hover {
-    background-color: darken(#1D809F, 10%);
+    background-color: darken($turquoise10);
     text-decoration: none;
 }
-
 
 
 
@@ -346,56 +354,56 @@ footer.footer .social-link:hover {
 ///////////////////////////////
 
 a {
-    color: #1D809F;
+    color: $turquoise;
 }
 a:hover,
 a:focus,
 a:active {
-    color: darken(#1D809F, 10%);
+    color: darken($turquoise10);
 }
 
 .btn-primary {
-    background-color: #1D809F;
-    border-color: #1D809F;
-    color: #FFF;
+    background-color: $turquoise;
+    border-color: $turquoise;
+    color: $white;
 }
 .btn-primary:hover,
 .btn-primary:focus,
 .btn-primary:active {
-    background-color: darken(#1D809F, 10%);
-    border-color: darken(#1D809F, 10%);
+    background-color: darken($turquoise10);
+    border-color: darken($turquoise10);
 }
 
 .btn-secondary {
-    background-color: #ECB807;
-    border-color: #ECB807;
-    color: #FFF;
+    background-color: $orange;
+    border-color: $orange;
+    color: $white;
 }
 .btn-secondary:hover,
 .btn-secondary:focus,
 .btn-secondary:active {
-    background-color: darken(#ECB807, 10%);
-    border-color: darken(#ECB807, 10%);
+    background-color: darken($orange10);
+    border-color: darken($orange10);
 }
 
 .btn-dark {
-    color: #FFF;
+    color: $white;
 }
 
 .btn {
     font-weight: 700;
-    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 3px 3px 0px $black1;
 }
 
 .bg-primary {
-    background-color: #1D809F;
+    background-color: $turquoise;
 }
 
 .text-primary {
-    color: #1D809F;
+    color: $turquoise;
 }
 
 .text-secondary {
-    color: #ECB807;
+    color: $orange;
 }
 
